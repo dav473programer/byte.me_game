@@ -2,12 +2,15 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $AudioStreamPlayer2D2
+@onready var tile_map: TileMapLayer = $"../TileMapLayer"
 
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -800.0
 const CLIMB_SPEED = 200.0
 
+var xaddr = 0
+var dir = false
 
 func _physics_process(delta: float) -> void:
 	if velocity.x > 1 and is_on_floor():
@@ -28,26 +31,54 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		if velocity.x < 1 and velocity.x > -1 and not is_on_wall():
 			animated_sprite_2d.animation = "jump"
-	if is_on_wall() and (Input.is_action_pressed("left") or Input.is_action_pressed("right")):
+	var col = get_last_slide_collision()
+	var map = col.get_collider() if col and col.get_collider() is TileMapLayer else null
+	var wall_tile = map.get_cell_tile_data(map.local_to_map(map.to_local(col.get_position() - col.get_normal()))) if map else null
+	var body_tile = tile_map.get_cell_tile_data(tile_map.local_to_map(tile_map.to_local(global_position))) if tile_map else null
+
+	var blocked = (wall_tile and wall_tile.get_custom_data("nclimbable")) or (body_tile and body_tile.get_custom_data("nclimbable"))
+
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+	
+	if is_on_wall() and not blocked and (Input.is_action_pressed("left") or Input.is_action_pressed("right")):
 		velocity.y = -CLIMB_SPEED
 		if Input.is_action_pressed("left"):
 			animated_sprite_2d.rotation_degrees = move_toward(animated_sprite_2d.rotation_degrees, 90, 15)
+			dir = true
 		if Input.is_action_pressed("right"):
 			animated_sprite_2d.rotation_degrees = move_toward(animated_sprite_2d.rotation_degrees, -90, 15)
+			dir = false
+		if Input.is_action_pressed("jump"):
+			print("yay")
+			if not dir:
+				xaddr = -1000
+			else:
+				xaddr = 1000
+			velocity.y = 0
 	else:
 		animated_sprite_2d.rotation_degrees = move_toward(animated_sprite_2d.rotation_degrees, 0, 15)
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		audio_stream_player_2d.play()
-		
+	
+	if xaddr != 0:
+		if not dir:
+			xaddr += 50
+		else:
+			xaddr -= 50
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
+	print(direction)
+	if xaddr == 0:
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = xaddr
+		velocity.y = 0
 		
 	move_and_slide()

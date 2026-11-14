@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://g3c4gxvd53x2"]
 
+[ext_resource type="Texture2D" uid="uid://mirmfsvwhlm0" path="res://assets/images/tiles/invis_sprites_final.png.png" id="1_sgxsk"]
 [ext_resource type="Texture2D" uid="uid://c2qfmlcndhm3v" path="res://assets/images/tiles/sprites_final.png" id="2_sgxsk"]
 [ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="3_xtl1o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dq7po"]
-texture = ExtResource("2_sgxsk")
+texture = ExtResource("1_sgxsk")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -105,8 +106,10 @@ texture = ExtResource("2_sgxsk")
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:4/0 = 0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0/custom_data_0 = true
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0/custom_data_0 = true
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:4/0 = 0
@@ -134,6 +137,7 @@ texture = ExtResource("2_sgxsk")
 20:4/0 = 0
 20:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:4/0 = 0
+21:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:5/0 = 0
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:5/0 = 0
@@ -141,9 +145,10 @@ texture = ExtResource("2_sgxsk")
 2:5/0 = 0
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:5/0 = 0
-3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0/custom_data_0 = true
 4:5/0 = 0
-4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0/custom_data_0 = true
+5:5/0 = 0
 6:5/0 = 0
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:5/0 = 0
@@ -171,6 +176,7 @@ texture = ExtResource("2_sgxsk")
 20:5/0 = 0
 20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:5/0 = 0
+21:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:6/0 = 0
 0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:6/0 = 0
@@ -296,7 +302,9 @@ texture = ExtResource("2_sgxsk")
 
 [sub_resource type="TileSet" id="TileSet_pe5hr"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_dq7po")
+custom_data_layer_0/name = "nclimbable"
+custom_data_layer_0/type = 1
+sources/2 = SubResource("TileSetAtlasSource_dq7po")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgxsk"]
 texture = ExtResource("2_sgxsk")
@@ -451,16 +459,17 @@ sources/0 = SubResource("TileSetAtlasSource_sgxsk")
 
 [node name="LevelDefault" type="Node2D" unique_id=657669375]
 scale = Vector2(3, 3)
+metadata/_edit_group_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=970391124]
 texture_filter = 1
 position = Vector2(0.33333334, 0)
-tile_map_data = PackedByteArray("AAAKAAoAAQAMAAgAAAALAAoAAQANAAgAAAAMAAoAAQANAAgAAAANAAoAAQANAAgAAAAOAAoAAQAOAAgAAAA=")
+tile_map_data = PackedByteArray("AAALAAoAAgADAAQAAAAMAAoAAgADAAQAAAANAAoAAgADAAQAAAA=")
 tile_set = SubResource("TileSet_pe5hr")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=969443217]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAKAAgAAAANAAEAAAAKAAkAAAANAAIAAAALAAgAAAAOAAEAAAALAAkAAAAOAAIAAAANAAgAAAANAAEAAAANAAkAAAANAAIAAAAOAAgAAAAOAAEAAAAOAAkAAAAOAAIAAAAMAAkAAAAPAAIAAAAMAAgAAAAPAAEAAAAMAAcAAAAPAAEAAAAMAAYAAAAPAAEAAAAMAAUAAAAPAAAAAAA=")
+tile_map_data = PackedByteArray("AAALAAgAAAAOAAkAAAALAAkAAAAOAAoAAAANAAgAAAASAAkAAAANAAkAAAASAAoAAAAMAAgAAAAPAAkAAAAMAAkAAAAPAAoAAAA=")
 tile_set = SubResource("TileSet_dq7po")
 
 [node name="CharacterBody2D" parent="." unique_id=219974435 instance=ExtResource("3_xtl1o")]

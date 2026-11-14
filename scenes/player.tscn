@@ -387,6 +387,7 @@ size = Vector2(12, 14.333334)
 position = Vector2(0, -1)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_g2els")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1746491162]
 texture_filter = 1
