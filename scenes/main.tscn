@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b4w2dq03gs28r"]
+
+[ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://dg6h6g7vpmaop" path="res://assets/images/red-basic-shape-for-new-product-stickers-special-offer-label-png.png" id="2_0wfyh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh0q7"]
+radius = 92.13577
+
+[node name="main" type="Node2D" unique_id=263613717]
+
+[node name="CharacterBody2D" parent="." unique_id=219974435 instance=ExtResource("1_o5qli")]
+position = Vector2(576, 127)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=452795944]
+position = Vector2(584, 726)
+scale = Vector2(5, 5)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1070886568]
+position = Vector2(3, 4)
+texture = ExtResource("2_0wfyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=46627449]
+position = Vector2(-1, -3)
+shape = SubResource("CircleShape2D_kh0q7")
