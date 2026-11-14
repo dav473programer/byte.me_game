@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4k62yi3hd0ij"
-path="res://.godot/imported/16x16 Jump-Sheet.png-67ec5e27f6e6448fdefdf7a98eb64857.ctex"
+uid="uid://ck80qrw3fj2lk"
+path="res://.godot/imported/walk.png-f8718ddfa87da4582918631555740f37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/16x16 Jump-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Jump-Sheet.png-67ec5e27f6e6448fdefdf7a98eb64857.ctex"]
+source_file="res://assets/images/player/walk.png"
+dest_files=["res://.godot/imported/walk.png-f8718ddfa87da4582918631555740f37.ctex"]
 
 [params]
 

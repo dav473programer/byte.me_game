@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	if velocity.x < 1 and is_on_floor():
 		animated_sprite_2d.animation = "walk"
 		animated_sprite_2d.flip_h = true
-	if velocity.x < 1 and velocity.x > -1 and is_on_floor():
+	if velocity.x == 0:
 		animated_sprite_2d.animation = "idle"
 	
 	# Add the gravity.
@@ -35,5 +35,5 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
 	move_and_slide()

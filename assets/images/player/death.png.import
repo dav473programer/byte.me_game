@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e7ws5g2nk3iw"
-path="res://.godot/imported/16x16 Walk-Sheet.png-d8ac24ba12fe2bfec62ceb86284bfb14.ctex"
+uid="uid://dx2vohbmtglp7"
+path="res://.godot/imported/death.png-1854aa8d64b8a6170f993eead54b99d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/16x16 Walk-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Walk-Sheet.png-d8ac24ba12fe2bfec62ceb86284bfb14.ctex"]
+source_file="res://assets/images/player/death.png"
+dest_files=["res://.godot/imported/death.png-1854aa8d64b8a6170f993eead54b99d4.ctex"]
 
 [params]
 
