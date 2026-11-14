@@ -384,19 +384,20 @@ animations = [{
 size = Vector2(12, 14.333334)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=219974435]
+position = Vector2(0, -1)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_g2els")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1746491162]
 texture_filter = 1
-position = Vector2(3, 0)
+position = Vector2(0, 0.6666667)
 sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"win"
+animation = &"walk"
 autoplay = "idle"
+offset = Vector2(3, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578574229]
-position = Vector2(0, 0.833333)
+position = Vector2(0, 0.6666666)
 shape = SubResource("RectangleShape2D_kh0q7")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1220023608]

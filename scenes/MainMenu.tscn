@@ -24,6 +24,7 @@ layout_mode = 0
 offset_right = 1294.0
 offset_bottom = 726.0
 color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+metadata/_edit_group_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=40299789]
 layout_mode = 0
@@ -100,6 +101,7 @@ offset_top = 147.0
 offset_right = 1185.0
 offset_bottom = 534.0
 color = Color(0.24032989, 0.26072443, 0.6732084, 1)
+metadata/_edit_group_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="ColorRect3" unique_id=1358836704]
 layout_mode = 1

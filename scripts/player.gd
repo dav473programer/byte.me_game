@@ -20,13 +20,13 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 		if not audio_stream_player_2d_2.playing:
 			audio_stream_player_2d_2.play()
-	if velocity.x == 0:
+	if velocity.x == 0 and not is_on_wall():
 		animated_sprite_2d.animation = "idle"
 	print(velocity.x)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		if velocity.x < 1 and velocity.x > -1:
+		if velocity.x < 1 and velocity.x > -1 and not is_on_wall():
 			animated_sprite_2d.animation = "jump"
 	if is_on_wall() and (Input.is_action_pressed("left") or Input.is_action_pressed("right")):
 		velocity.y = -CLIMB_SPEED
