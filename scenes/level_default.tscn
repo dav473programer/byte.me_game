@@ -452,11 +452,6 @@ sources/0 = SubResource("TileSetAtlasSource_sgxsk")
 [node name="LevelDefault" type="Node2D" unique_id=657669375]
 scale = Vector2(3, 3)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1562380556]
-offset_right = 430.6667
-offset_bottom = 244.33334
-color = Color(0, 0, 0, 1)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=970391124]
 texture_filter = 1
 position = Vector2(0.33333334, 0)
@@ -464,6 +459,7 @@ tile_map_data = PackedByteArray("AAAKAAoAAQAMAAgAAAALAAoAAQANAAgAAAAMAAoAAQANAAg
 tile_set = SubResource("TileSet_pe5hr")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=969443217]
+texture_filter = 1
 tile_map_data = PackedByteArray("AAAKAAgAAAANAAEAAAAKAAkAAAANAAIAAAALAAgAAAAOAAEAAAALAAkAAAAOAAIAAAANAAgAAAANAAEAAAANAAkAAAANAAIAAAAOAAgAAAAOAAEAAAAOAAkAAAAOAAIAAAAMAAkAAAAPAAIAAAAMAAgAAAAPAAEAAAAMAAcAAAAPAAEAAAAMAAYAAAAPAAEAAAAMAAUAAAAPAAAAAAA=")
 tile_set = SubResource("TileSet_dq7po")
 
