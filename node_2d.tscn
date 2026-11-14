@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://bdj2olffck871"]
 
-[ext_resource type="Script" uid="uid://3uky8rtaj8m7" path="res://control.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://bup7kut0g53hi" path="res://red-basic-shape-for-new-product-stickers-special-offer-label-png.png" id="1_wtcfe"]
 
-[node name="Node2D" type="Node2D" unique_id=1096099243]
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh0q7"]
+radius = 92.0
 
-[node name="Control" type="Control" parent="." unique_id=1607910780]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 324.0
-offset_top = 112.0
-offset_right = 364.0
-offset_bottom = 152.0
-script = ExtResource("1_wtcfe")
+[node name="Node2D" type="Node2D" unique_id=1879355987]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=177717576]
+position = Vector2(501, 190)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1912474634]
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=537262582]
+position = Vector2(-4, -7)
+shape = SubResource("CircleShape2D_kh0q7")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=326738613]
