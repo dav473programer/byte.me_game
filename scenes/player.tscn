@@ -381,19 +381,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kh0q7"]
-size = Vector2(24, 14.333334)
+size = Vector2(12, 14.333334)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=219974435]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_g2els")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1746491162]
 texture_filter = 1
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"idle"
+animation = &"win"
 autoplay = "idle"
-frame_progress = 0.51074547
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578574229]
 position = Vector2(0, 0.833333)
