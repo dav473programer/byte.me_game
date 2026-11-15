@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dioiscx2b47e6"
-path="res://.godot/imported/idleani.png-f928a90d6fffc2e87f2b92afaccfa024.ctex"
+uid="uid://8wpvba1t603r"
+path="res://.godot/imported/jumpfall.png-7dd585a8aa98d5d79ea1a6c0bc7bc710.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/idleani.png"
-dest_files=["res://.godot/imported/idleani.png-f928a90d6fffc2e87f2b92afaccfa024.ctex"]
+source_file="res://assets/images/player/jumpfall.png"
+dest_files=["res://.godot/imported/jumpfall.png-7dd585a8aa98d5d79ea1a6c0bc7bc710.ctex"]
 
 [params]
 

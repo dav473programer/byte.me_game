@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mirmfsvwhlm0"
-path="res://.godot/imported/invis_sprites_final.png.png-b31ce208e9458a01ca346075c74d2c05.ctex"
+uid="uid://cu1dqrxwc1m6e"
+path="res://.godot/imported/invis_sprites.png-150b0a80eccf3c019b3bff46e463484d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tiles/invis_sprites_final.png.png"
-dest_files=["res://.godot/imported/invis_sprites_final.png.png-b31ce208e9458a01ca346075c74d2c05.ctex"]
+source_file="res://assets/images/tiles/invis_sprites.png"
+dest_files=["res://.godot/imported/invis_sprites.png-150b0a80eccf3c019b3bff46e463484d.ctex"]
 
 [params]
 

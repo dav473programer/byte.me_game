@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite_2d.rotation_degrees = move_toward(animated_sprite_2d.rotation_degrees, 0, 15)
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		audio_stream_player_2d.play()
 	

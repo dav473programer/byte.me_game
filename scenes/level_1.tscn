@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://bmm6jfewlr4xv"]
 
+[ext_resource type="Texture2D" uid="uid://cu1dqrxwc1m6e" path="res://assets/images/tiles/invis_sprites.png" id="1_bswci"]
 [ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="2_bswci"]
-[ext_resource type="Texture2D" uid="uid://mirmfsvwhlm0" path="res://assets/images/tiles/invis_sprites_final.png.png" id="2_rus8k"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xbjy"]
-texture = ExtResource("2_rus8k")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
+texture = ExtResource("1_bswci")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -103,12 +103,6 @@ texture = ExtResource("2_rus8k")
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:4/0 = 0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:4/0/custom_data_0 = true
-4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:4/0/custom_data_0 = true
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:4/0 = 0
@@ -143,11 +137,6 @@ texture = ExtResource("2_rus8k")
 1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:5/0 = 0
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:5/0 = 0
-3:5/0/custom_data_0 = true
-4:5/0 = 0
-4:5/0/custom_data_0 = true
-5:5/0 = 0
 6:5/0 = 0
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:5/0 = 0
@@ -298,15 +287,23 @@ texture = ExtResource("2_rus8k")
 19:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:10/0 = 0
 20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0/custom_data_0 = true
+4:6/0 = 0
+4:6/0/custom_data_0 = true
 
 [sub_resource type="TileSet" id="TileSet_smehm"]
 physics_layer_0/collision_layer = 1
 custom_data_layer_0/name = "nclimbable"
 custom_data_layer_0/type = 1
-sources/1 = SubResource("TileSetAtlasSource_5xbjy")
+sources/3 = SubResource("TileSetAtlasSource_rus8k")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5xbjy"]
+load_path = "res://.godot/imported/invis_sprites_final.png.png-b31ce208e9458a01ca346075c74d2c05.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
-texture = ExtResource("2_rus8k")
+texture = SubResource("CompressedTexture2D_5xbjy")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -463,7 +460,7 @@ scale = Vector2(3, 3)
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=970391124]
 texture_filter = 1
 position = Vector2(0.33333334, 0)
-tile_map_data = PackedByteArray("AAAEAAcAAQAHAAUAAAAFAAcAAQAHAAUAAAADAAcAAQAHAAUAAAAOAAcAAQAHAAUAAAAPAAcAAQAHAAUAAAAQAAcAAQAHAAUAAAAAAAcAAQADAAQAAAABAAcAAQAHAAUAAAACAAcAAQAHAAUAAAAGAAcAAQAHAAUAAAAHAAcAAQAHAAUAAAAIAAcAAQAHAAUAAAAJAAcAAQAHAAUAAAAKAAcAAQAHAAUAAAALAAcAAQAHAAUAAAAMAAcAAQAHAAUAAAAZAAcAAQAHAAUAAAARAAcAAQAHAAUAAAASAAcAAQAHAAUAAAATAAcAAQAHAAUAAAANAAcAAQAHAAUAAAAUAAcAAQAHAAUAAAAVAAcAAQAHAAUAAAAWAAcAAQAHAAUAAAAXAAcAAQAHAAUAAAAYAAcAAQAHAAUAAAAVAAYAAQAHAAUAAAAVAAUAAQAHAAUAAAAVAAQAAQAHAAUAAAAVAAMAAQAHAAUAAAAWAAIAAQAHAAUAAAAWAAEAAQAHAAUAAAAWAAAAAQAHAAUAAAAWAP//AQAHAAUAAAAAAAAAAQADAAQAAAAAAAEAAQADAAQAAAAAAAIAAQADAAQAAAAAAAMAAQADAAQAAAAAAAQAAQADAAQAAAAAAAUAAQADAAQAAAAAAAYAAQADAAQAAAAVAAIAAQADAAUAAAAVAAEAAQADAAUAAAAVAAAAAQADAAUAAAAVAP//AQADAAUAAAARAAQAAQAHAAUAAAASAAQAAQAHAAUAAAAQAP//AQAHAAUAAAAQAAAAAQAHAAUAAAAQAAEAAQAHAAUAAAAQAAIAAQAHAAUAAAAQAAMAAQAHAAUAAAAQAAQAAQAHAAUAAAA=")
+tile_map_data = PackedByteArray("AAAAAAgAAwABAAQAAAABAAgAAwABAAQAAAACAAgAAwABAAQAAAADAAgAAwABAAQAAAAEAAgAAwABAAQAAAAFAAgAAwABAAQAAAAGAAgAAwABAAQAAAAHAAgAAwABAAQAAAAIAAgAAwABAAQAAAAJAAgAAwABAAQAAAAKAAgAAwABAAQAAAALAAgAAwABAAQAAAAMAAgAAwABAAQAAAANAAgAAwABAAQAAAAOAAgAAwABAAQAAAAPAAgAAwABAAQAAAAQAAgAAwABAAQAAADx/wgAAwADAAYAAADy/wgAAwABAAQAAADz/wgAAwABAAQAAAD0/wgAAwABAAQAAAD1/wgAAwABAAQAAAD2/wgAAwABAAQAAAD3/wgAAwABAAQAAAD4/wgAAwABAAQAAAD5/wgAAwABAAQAAAD6/wgAAwABAAQAAAD7/wgAAwABAAQAAAD8/wgAAwABAAQAAAD9/wgAAwABAAQAAAD+/wgAAwABAAQAAAD//wgAAwABAAQAAAARAAgAAwABAAQAAAASAAgAAwABAAQAAAATAAgAAwABAAQAAAAUAAgAAwABAAQAAAAVAAgAAwABAAQAAAAWAAgAAwABAAQAAAAXAAgAAwABAAQAAAAYAAgAAwABAAQAAAAZAAgAAwABAAQAAAAaAAgAAwABAAQAAAAbAAgAAwABAAQAAAAcAAgAAwABAAQAAAAdAAgAAwABAAQAAAAeAAgAAwABAAQAAAAfAAgAAwABAAQAAAAgAAgAAwABAAQAAAAhAAgAAwABAAQAAAAiAAgAAwABAAQAAAAjAAgAAwABAAQAAAAkAAgAAwABAAQAAAAlAAgAAwABAAQAAAAmAAgAAwABAAQAAAAnAAgAAwABAAQAAAAoAAgAAwABAAQAAAApAAgAAwABAAQAAAAqAAgAAwABAAQAAAArAAgAAwABAAQAAAAsAAgAAwABAAQAAAAtAAgAAwABAAQAAAAuAAgAAwABAAQAAAAvAAgAAwABAAQAAAAwAAgAAwABAAQAAAAxAAgAAwABAAQAAAAyAAgAAwABAAQAAAAzAAgAAwABAAQAAAA0AAgAAwABAAQAAAA1AAgAAwABAAQAAAA2AAgAAwABAAQAAAA3AAgAAwABAAQAAAA4AAgAAwABAAQAAAA5AAgAAwABAAQAAAA6AAgAAwABAAQAAAA7AAgAAwABAAQAAAA8AAgAAwABAAQAAAA9AAgAAwABAAQAAAA+AAgAAwABAAQAAAA/AAgAAwABAAQAAABAAAgAAwABAAQAAABBAAgAAwABAAQAAABCAAgAAwABAAQAAABDAAgAAwABAAQAAABEAAgAAwABAAQAAABFAAgAAwABAAQAAADx/wMAAwADAAYAAADx/wQAAwADAAYAAADx/wUAAwADAAYAAADx/wYAAwADAAYAAADx/wIAAwADAAYAAADx/wcAAwADAAYAAAD8/wYAAwAPAAEAAAD8/wcAAwAPAAIAAAD8/wIAAwAPAAEAAAD8/wMAAwAPAAEAAAD8/wQAAwAPAAEAAAD8/wUAAwAPAAEAAAD8/wEAAwAPAAAAAAD7/wEAAwAEAAYAAAD7/wIAAwAEAAYAAAD7/wMAAwAEAAYAAAD7/wQAAwAEAAYAAAD7/wUAAwAEAAYAAAD7/wYAAwAEAAYAAAD7/wcAAwAEAAYAAAA=")
 tile_set = SubResource("TileSet_smehm")
 physics_quadrant_size = 15
 

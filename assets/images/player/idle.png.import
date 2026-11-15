@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djie3n6drvwcn"
-path="res://.godot/imported/TEST_CRISTI.png-b9fca38ecc2402bd905e0179f9d77694.ctex"
+uid="uid://c21by5kxycsv1"
+path="res://.godot/imported/idle.png-3122d7395b5e7fa83509715577113d69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/TEST_CRISTI.png"
-dest_files=["res://.godot/imported/TEST_CRISTI.png-b9fca38ecc2402bd905e0179f9d77694.ctex"]
+source_file="res://assets/images/player/idle.png"
+dest_files=["res://.godot/imported/idle.png-3122d7395b5e7fa83509715577113d69.ctex"]
 
 [params]
 
