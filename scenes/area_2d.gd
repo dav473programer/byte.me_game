@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://scenes/3MAZE.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/4TRIAL.tscn") # Replace with function body.
