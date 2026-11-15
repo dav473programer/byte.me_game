@@ -9,10 +9,19 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -800.0
 const CLIMB_SPEED = 200.0
 
+var fr = true
 var xaddr = 0
 var dir = false
 
 func _physics_process(delta: float) -> void:
+	if fr:
+		animated_sprite_2d.speed_scale = (-1)
+		animated_sprite_2d.animation = "die"
+		await get_tree().create_timer(1.4).timeout
+		animated_sprite_2d.speed_scale = (1)
+		animated_sprite_2d.animation = "idle"
+		fr = false
+	
 	if velocity.x > 1 and is_on_floor():
 		animated_sprite_2d.animation = "walk"
 		animated_sprite_2d.flip_h = false
@@ -23,7 +32,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 		if not audio_stream_player_2d_2.playing:
 			audio_stream_player_2d_2.play()
-	if velocity.x == 0 and not is_on_wall():
+	if velocity.x == 0 and not is_on_wall() and animated_sprite_2d.animation != "die":
 		animated_sprite_2d.animation = "idle"
 	print(velocity.x)
 	# Add the gravity.
@@ -39,6 +48,8 @@ func _physics_process(delta: float) -> void:
 	var blocked = (wall_tile and wall_tile.get_custom_data("nclimbable")) or (body_tile and body_tile.get_custom_data("nclimbable"))
 
 	if Input.is_action_just_pressed("restart"):
+		animated_sprite_2d.animation = "die"
+		await get_tree().create_timer(1.4).timeout
 		get_tree().reload_current_scene()
 	
 	if is_on_wall() and not blocked and (Input.is_action_pressed("left") or Input.is_action_pressed("right")):
@@ -55,7 +66,7 @@ func _physics_process(delta: float) -> void:
 				xaddr = -1000
 			else:
 				xaddr = 1000
-			velocity.y = 0
+			velocity.y = -500
 	else:
 		animated_sprite_2d.rotation_degrees = move_toward(animated_sprite_2d.rotation_degrees, 0, 15)
 	# Handle jump.
@@ -64,6 +75,8 @@ func _physics_process(delta: float) -> void:
 		audio_stream_player_2d.play()
 	
 	if xaddr != 0:
+		if velocity.y == 0:
+			velocity.y += 10
 		if not dir:
 			xaddr += 50
 		else:
@@ -79,6 +92,5 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	else:
 		velocity.x = xaddr
-		velocity.y = 0
 		
 	move_and_slide()
