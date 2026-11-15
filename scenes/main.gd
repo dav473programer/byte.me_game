@@ -4,7 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://scenes/MainMenu.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
