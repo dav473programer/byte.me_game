@@ -1,10 +1,11 @@
-[gd_scene format=4 uid="uid://bmm6jfewlr4xv"]
+[gd_scene format=4 uid="uid://fy3tht1wnyt0"]
 
-[ext_resource type="Texture2D" uid="uid://cu1dqrxwc1m6e" path="res://assets/images/tiles/invis_sprites.png" id="1_bswci"]
-[ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="2_bswci"]
+[ext_resource type="Texture2D" uid="uid://cu1dqrxwc1m6e" path="res://assets/images/tiles/invis_sprites.png" id="1_30c1t"]
+[ext_resource type="Texture2D" uid="uid://c2qfmlcndhm3v" path="res://assets/images/tiles/sprites_final.png" id="2_lsmjw"]
+[ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="3_x4xf0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
-texture = ExtResource("1_bswci")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dq7po"]
+texture = ExtResource("1_30c1t")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -293,17 +294,14 @@ texture = ExtResource("1_bswci")
 4:6/0 = 0
 4:6/0/custom_data_0 = true
 
-[sub_resource type="TileSet" id="TileSet_smehm"]
+[sub_resource type="TileSet" id="TileSet_pe5hr"]
 physics_layer_0/collision_layer = 1
 custom_data_layer_0/name = "nclimbable"
 custom_data_layer_0/type = 1
-sources/3 = SubResource("TileSetAtlasSource_rus8k")
+sources/3 = SubResource("TileSetAtlasSource_dq7po")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5xbjy"]
-load_path = "res://.godot/imported/invis_sprites_final.png.png-b31ce208e9458a01ca346075c74d2c05.ctex"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
-texture = SubResource("CompressedTexture2D_5xbjy")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgxsk"]
+texture = ExtResource("2_lsmjw")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -374,7 +372,6 @@ texture = SubResource("CompressedTexture2D_5xbjy")
 2:5/0 = 0
 3:5/0 = 0
 4:5/0 = 0
-5:5/0 = 0
 6:5/0 = 0
 7:5/0 = 0
 8:5/0 = 0
@@ -451,21 +448,169 @@ texture = SubResource("CompressedTexture2D_5xbjy")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_kh0q7"]
-sources/1 = SubResource("TileSetAtlasSource_4nkto")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pbc48"]
+texture = ExtResource("1_30c1t")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+6:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+3:4/0 = 0
 
-[node name="Level1" type="Node2D" unique_id=657669375]
+[sub_resource type="TileSet" id="TileSet_dq7po"]
+sources/0 = SubResource("TileSetAtlasSource_sgxsk")
+sources/1 = SubResource("TileSetAtlasSource_pbc48")
+
+[node name="LevelDefault" type="Node2D" unique_id=657669375]
+position = Vector2(3, -22)
 scale = Vector2(3, 3)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=970391124]
 texture_filter = 1
 position = Vector2(0.33333334, 0)
-tile_map_data = PackedByteArray("AAAAAAgAAwABAAQAAAABAAgAAwABAAQAAAACAAgAAwABAAQAAAADAAgAAwABAAQAAAAEAAgAAwABAAQAAAAFAAgAAwABAAQAAAAGAAgAAwABAAQAAAAHAAgAAwABAAQAAAAIAAgAAwABAAQAAAAJAAgAAwABAAQAAAAKAAgAAwABAAQAAAALAAgAAwABAAQAAAAMAAgAAwABAAQAAAANAAgAAwABAAQAAAAOAAgAAwABAAQAAAAPAAgAAwABAAQAAAAQAAgAAwABAAQAAADx/wgAAwADAAYAAADy/wgAAwABAAQAAADz/wgAAwABAAQAAAD0/wgAAwABAAQAAAD1/wgAAwABAAQAAAD2/wgAAwABAAQAAAD3/wgAAwABAAQAAAD4/wgAAwABAAQAAAD5/wgAAwABAAQAAAD6/wgAAwABAAQAAAD7/wgAAwABAAQAAAD8/wgAAwABAAQAAAD9/wgAAwABAAQAAAD+/wgAAwABAAQAAAD//wgAAwABAAQAAAARAAgAAwABAAQAAAASAAgAAwABAAQAAAATAAgAAwABAAQAAAAUAAgAAwABAAQAAAAVAAgAAwABAAQAAAAWAAgAAwABAAQAAAAXAAgAAwABAAQAAAAYAAgAAwABAAQAAAAZAAgAAwABAAQAAAAaAAgAAwABAAQAAAAbAAgAAwABAAQAAAAcAAgAAwABAAQAAAAdAAgAAwABAAQAAAAeAAgAAwABAAQAAAAfAAgAAwABAAQAAAAgAAgAAwABAAQAAAAhAAgAAwABAAQAAAAiAAgAAwABAAQAAAAjAAgAAwABAAQAAAAkAAgAAwABAAQAAAAlAAgAAwABAAQAAAAmAAgAAwABAAQAAAAnAAgAAwABAAQAAAAoAAgAAwABAAQAAAApAAgAAwABAAQAAAAqAAgAAwABAAQAAAArAAgAAwABAAQAAAAsAAgAAwABAAQAAAAtAAgAAwABAAQAAAAuAAgAAwABAAQAAAAvAAgAAwABAAQAAAAwAAgAAwABAAQAAAAxAAgAAwABAAQAAAAyAAgAAwABAAQAAAAzAAgAAwABAAQAAAA0AAgAAwABAAQAAAA1AAgAAwABAAQAAAA2AAgAAwABAAQAAAA3AAgAAwABAAQAAAA4AAgAAwABAAQAAAA5AAgAAwABAAQAAAA6AAgAAwABAAQAAAA7AAgAAwABAAQAAAA8AAgAAwABAAQAAAA9AAgAAwABAAQAAAA+AAgAAwABAAQAAAA/AAgAAwABAAQAAABAAAgAAwABAAQAAABBAAgAAwABAAQAAABCAAgAAwABAAQAAABDAAgAAwABAAQAAABEAAgAAwABAAQAAABFAAgAAwABAAQAAADx/wMAAwADAAYAAADx/wQAAwADAAYAAADx/wUAAwADAAYAAADx/wYAAwADAAYAAADx/wIAAwADAAYAAADx/wcAAwADAAYAAAD8/wYAAwAPAAEAAAD8/wcAAwAPAAIAAAD8/wIAAwAPAAEAAAD8/wMAAwAPAAEAAAD8/wQAAwAPAAEAAAD8/wUAAwAPAAEAAAD8/wEAAwAPAAAAAAD7/wEAAwAEAAYAAAD7/wIAAwAEAAYAAAD7/wMAAwAEAAYAAAD7/wQAAwAEAAYAAAD7/wUAAwAEAAYAAAD7/wYAAwAEAAYAAAD7/wcAAwAEAAYAAAA=")
-tile_set = SubResource("TileSet_smehm")
-physics_quadrant_size = 15
+tile_map_data = PackedByteArray("AAALAAoAAwADAAYAAAAMAAoAAwADAAYAAAANAAoAAwADAAYAAAAJAAYAAwARAAgAAAAJAAUAAwADAAYAAAAJAAQAAwADAAYAAAAJAAMAAwADAAYAAAAIAAIAAwADAAYAAAAIAAEAAwADAAYAAAAIAAAAAwADAAYAAAAIAP//AwADAAYAAAAIAP7/AwADAAYAAAAIAP3/AwADAAYAAAAIAPz/AwADAAYAAAAJAPz/AwADAAYAAAAJAPv/AwADAAYAAAAJAPr/AwADAAYAAAAJAP3/AwADAAYAAAAJAP7/AwADAAYAAAAJAP//AwADAAYAAAAJAAAAAwADAAYAAAAKAAYAAwASAAgAAAALAAYAAwASAAgAAAAMAAYAAwASAAgAAAANAAYAAwASAAgAAAAOAAYAAwASAAgAAAAPAAYAAwASAAgAAAAQAAYAAwASAAgAAAARAAYAAwASAAgAAAASAAYAAwASAAgAAAATAAYAAwASAAgAAAAUAAYAAwASAAgAAAAVAAYAAwASAAgAAAAWAAYAAwASAAgAAAAXAAYAAwASAAgAAAASAAIAAwAJAAEAAAASAAMAAwAJAAEAAAASAAQAAwAJAAEAAAASAAUAAwAJAAEAAAAaAAIAAwAJAAEAAAAaAAMAAwAJAAEAAAAaAAQAAwAJAAEAAAAaAAUAAwAJAAEAAAAiAAIAAwAJAAEAAAAiAAMAAwAJAAEAAAAiAAQAAwAJAAEAAAAiAAUAAwAJAAEAAAAZAAYAAwASAAgAAAAYAAYAAwASAAgAAAAaAAYAAwASAAgAAAAbAAYAAwASAAgAAAAcAAYAAwASAAgAAAAdAAYAAwASAAgAAAAeAAYAAwASAAgAAAAfAAYAAwASAAgAAAAgAAYAAwASAAgAAAAhAAYAAwASAAgAAAAiAAYAAwASAAgAAAAjAAYAAwASAAgAAAAkAAYAAwASAAgAAAAlAAYAAwASAAgAAAAmAAYAAwASAAgAAAAnAAYAAwASAAgAAAAoAAYAAwASAAgAAAApAAYAAwASAAgAAAAqAAYAAwASAAgAAAAnAAUAAwAJAAkAAAAoAAUAAwAJAAkAAAApAAUAAwAJAAkAAAAsAAIAAwAJAAkAAAAtAAIAAwAJAAkAAAAuAAIAAwAJAAkAAAArAAYAAwASAAgAAAAsAAYAAwASAAgAAAAtAAYAAwASAAgAAAAuAAYAAwASAAgAAAAwAAYAAwASAAgAAAAxAAYAAwASAAgAAAAyAAYAAwASAAgAAAAvAAYAAwASAAgAAAAzAAYAAwARAAkAAAAzAAUAAwAAAAIAAAAzAAQAAwAAAAIAAAAzAAMAAwAAAAIAAAAzAAIAAwAAAAIAAAAzAAEAAwAAAAIAAAA=")
+tile_set = SubResource("TileSet_pe5hr")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1584825158]
-tile_set = SubResource("TileSet_kh0q7")
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=969443217]
+texture_filter = 1
+tile_set = SubResource("TileSet_dq7po")
 
-[node name="CharacterBody2D" parent="." unique_id=219974435 instance=ExtResource("2_bswci")]
-position = Vector2(46.66668, 82.33333)
+[node name="CharacterBody2D" parent="." unique_id=219974435 instance=ExtResource("3_x4xf0")]
+position = Vector2(198.66669, 75.66668)
