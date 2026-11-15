@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cu1dqrxwc1m6e" path="res://assets/images/tiles/invis_sprites.png" id="2_elt3v"]
 [ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="3_ecgqb"]
+[ext_resource type="Texture2D" uid="uid://2wbtsua0l8vv" path="res://assets/images/boss.png" id="3_elt3v"]
+[ext_resource type="Script" uid="uid://bfeyk2y5uf5nk" path="res://scenes/animated_sprite_2d.gd" id="4_ecgqb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_elt3v")
@@ -599,6 +601,42 @@ texture = SubResource("CompressedTexture2D_5xbjy")
 sources/1 = SubResource("TileSetAtlasSource_4nkto")
 sources/0 = SubResource("TileSetAtlasSource_0s2dt")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lh2h"]
+atlas = ExtResource("3_elt3v")
+region = Rect2(0, 0, 101, 99)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2bf3"]
+atlas = ExtResource("3_elt3v")
+region = Rect2(101, 0, 101, 99)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljpdx"]
+atlas = ExtResource("3_elt3v")
+region = Rect2(202, 0, 101, 99)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7nqd"]
+atlas = ExtResource("3_elt3v")
+region = Rect2(303, 0, 101, 99)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kh0q7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lh2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2bf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljpdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7nqd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level1" type="Node2D" unique_id=657669375]
 scale = Vector2(3, 3)
 
@@ -615,3 +653,10 @@ tile_set = SubResource("TileSet_kh0q7")
 
 [node name="CharacterBody2D" parent="." unique_id=219974435 instance=ExtResource("3_ecgqb")]
 position = Vector2(46.66668, 82.33333)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=535249571]
+position = Vector2(342.33334, 0)
+sprite_frames = SubResource("SpriteFrames_kh0q7")
+frame = 2
+frame_progress = 0.4867011
+script = ExtResource("4_ecgqb")
