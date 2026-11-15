@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cu1dqrxwc1m6e" path="res://assets/images/tiles/invis_sprites.png" id="1_xnt43"]
 [ext_resource type="Texture2D" uid="uid://c2qfmlcndhm3v" path="res://assets/images/tiles/sprites_final.png" id="2_y5hhw"]
 [ext_resource type="PackedScene" uid="uid://cqdtenf38kw76" path="res://scenes/player.tscn" id="3_mgh3k"]
+[ext_resource type="Script" uid="uid://drfjrwuiskp0k" path="res://scenes/area_2d.gd" id="4_y5hhw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dq7po"]
 texture = ExtResource("1_xnt43")
@@ -459,6 +460,9 @@ texture = ExtResource("2_y5hhw")
 [sub_resource type="TileSet" id="TileSet_dq7po"]
 sources/0 = SubResource("TileSetAtlasSource_sgxsk")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgh3k"]
+size = Vector2(91.33403, 66.66667)
+
 [node name="LevelDefault" type="Node2D" unique_id=657669375]
 scale = Vector2(3, 3)
 
@@ -475,3 +479,14 @@ tile_set = SubResource("TileSet_dq7po")
 
 [node name="CharacterBody2D" parent="." unique_id=219974435 instance=ExtResource("3_mgh3k")]
 position = Vector2(156.33337, 77.33333)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=332144495]
+script = ExtResource("4_y5hhw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1855650734]
+physics_interpolation_mode = 2
+position = Vector2(2177.334, 127.66668)
+shape = SubResource("RectangleShape2D_mgh3k")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

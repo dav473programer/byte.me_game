@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b605t0fj7264f" path="res://assets/images/image-removebg-preview.png" id="1_kss82"]
 [ext_resource type="Script" uid="uid://daygyiesqdipu" path="res://area_2d.gd" id="2_g6ya7"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh0q7"]
+radius = 9.219544
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pi38"]
 atlas = ExtResource("1_kss82")
 region = Rect2(0, 0, 123, 78)
@@ -53,8 +56,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=332781050]
-sprite_frames = SubResource("SpriteFrames_pe5hr")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1941922493]
+[node name="Area2D" type="Area2D" unique_id=1941922493]
 script = ExtResource("2_g6ya7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1382598631]
+position = Vector2(25, 0)
+shape = SubResource("CircleShape2D_kh0q7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=332781050]
+z_index = 10
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pe5hr")
+autoplay = "default"

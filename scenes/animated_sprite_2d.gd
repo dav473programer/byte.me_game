@@ -2,59 +2,50 @@ extends AnimatedSprite2D
 
 @onready var character_body_2d: CharacterBody2D = $"../CharacterBody2D"
 
-# Export variables so you can adjust them right in the Godot Inspector
+# Make sure this path matches the exact name and folder of your projectile scene!
 @export var fire_scene: PackedScene = preload("res://fp.tscn")
-@export var shoot_interval: float = 1.8  # Seconds between each fireball
-@export var detection_range: float = 450.0 # Maximum distance to trigger shooting
+@export var shoot_interval: float = 1.5
+@export var detection_range: float = 800.0 # Increased range so it's harder to be out of range
 
 var shoot_timer: float = 0.0
-
-func _ready() -> void:
-	# Plays an idle animation automatically if you've created one in SpriteFrames
-	if sprite_frames and sprite_frames.has_animation("idle"):
-		play("idle")
 
 func _process(delta: float) -> void:
 	if not character_body_2d:
 		return
 
-	# 1. Calculate direction and distance to the target
-	var target_pos = character_body_2d.global_position
-	var to_target = target_pos - global_position
+	var to_target = character_body_2d.global_position - global_position
 	var distance = to_target.length()
 
-	# 2. Smoothly rotate/aim the AnimatedSprite2D directly at the target
+	# Aim at the player
 	rotation = to_target.angle()
 
-	# 3. Handle firing logic when the target is within range
+	# Check range and timer
 	if distance <= detection_range:
 		shoot_timer += delta
 		if shoot_timer >= shoot_interval:
 			shoot_timer = 0.0
 			shoot_fireball()
 	else:
-		# Reset timer slightly so it shoots immediately when player re-enters range
-		shoot_timer = max(0.0, shoot_timer - delta)
+		# Temporarily removed the timer penalty so it doesn't get stuck if you walk in/out of range
+		pass
 
 func shoot_fireball() -> void:
-	# Play a "shoot" or "attack" animation if you have one set up
-	if sprite_frames and sprite_frames.has_animation("shoot"):
-		play("shoot")
-		# Optional: queue back to idle after animation finishes, 
-		# or let AnimatedSprite2D handle loops.
-
-	if fire_scene:
-		var fire = fire_scene.instantiate()
+	if not fire_scene:
+		return
 		
-		# Place it at the shooter's current position
-		fire.global_position = global_position
+	var fire = fire_scene.instantiate()
+	
+	# 1. Add it to the main scene tree FIRST so it has a valid global position
+	get_tree().current_scene.add_child(fire)
+	
+	# 2. THEN set its position right on the shooter
+	fire.global_position = global_position
+	
+	# 3. Pass the direction and rotation
+	var fire_direction = (character_body_2d.global_position - global_position).normalized()
+	if "direction" in fire:
+		fire.direction = fire_direction
+	if "rotation" in fire:
+		fire.rotation = fire_direction.angle()
 		
-		# Pass the movement vector to the projectile
-		var fire_direction = (character_body_2d.global_position - global_position).normalized()
-		if "direction" in fire:
-			fire.direction = fire_direction
-		if "rotation" in fire:
-			fire.rotation = fire_direction.angle()
-			
-		# Add it to the main scene tree so it moves freely across the level
-		get_tree().current_scene.add_child(fire)
+	print("SUCCESS: Fireball instantiated and added to scene!")

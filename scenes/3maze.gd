@@ -21,7 +21,7 @@ func _ready() -> void:
 	InputMap.action_add_event("level_down", down)
 	
 	# 3. Scale down the character
-	character_body_2d.scale = Vector2(0.5, 0.5)
+	character_body_2d.scale = Vector2(1.2, 1.2)
 
 func _physics_process(delta: float) -> void:
 	# Read W (-1) and S (+1) to move up and down
