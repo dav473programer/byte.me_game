@@ -193,18 +193,6 @@ text = "Level6"
 layout_mode = 2
 text = "Level7"
 
-[node name="Button9" type="Button" parent="ColorRect4/CenterContainer/VBoxContainer" unique_id=7119280]
-layout_mode = 2
-text = "Level8"
-
-[node name="Button10" type="Button" parent="ColorRect4/CenterContainer/VBoxContainer" unique_id=1734795869]
-layout_mode = 2
-text = "Level9"
-
-[node name="Button11" type="Button" parent="ColorRect4/CenterContainer/VBoxContainer" unique_id=863884132]
-layout_mode = 2
-text = "LevelX"
-
 [node name="Button" type="Button" parent="ColorRect4/CenterContainer/VBoxContainer" unique_id=1797027157]
 texture_filter = 1
 layout_mode = 2
@@ -217,4 +205,10 @@ text = "Back to main menu"
 [connection signal="pressed" from="ColorRect2/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect3/CenterContainer/VBoxContainer/Button2" to="ColorRect3" method="hide"]
 [connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="ColorRect4/CenterContainer/VBoxContainer/Button" to="ColorRect4" method="hide"]
